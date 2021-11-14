@@ -21,8 +21,8 @@ def num_unique_words(fname):
     
 def avg_and_max_sentence_len(fname):
     text = get_text(fname)
-    end_cen_pattern = "[\.\?\!][ \n\"] *\n*[A-Z\'\"]"
-    sentences = re.split(end_cen_pattern, text)
+    end_sen_pattern = "[\.\?\!][ \n\"] *\n*[A-Z\'\"]"
+    sentences = re.split(end_sen_pattern, text)
     sentences_len = [len(s.split()) for s in sentences]
     avg_len = sum(sentences_len) / len(sentences)
     max_len = max(sentences_len)
